@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <title>Image Slider</title>
+    <!--Stylesheet-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="https://i.postimg.cc/W33MSM8K/image1.jpg" id="content1" class="active">
+            <img src="https://i.postimg.cc/kgmYspbp/image2.jpg" id="content2">
+            <img src="https://i.postimg.cc/yxRnXmYK/image3.jpg" id="content3">
+            <img src="https://i.postimg.cc/RFkLFW1D/image4.jpg" id="content4">
+        </div>
+        <div class="dot-container">
+            <button onclick = "dot(1)"></button>
+            <button onclick = "dot(2)"></button>
+            <button onclick = "dot(3)"></button>
+            <button onclick = "dot(4)"></button>
+        </div>
+        <button id="prev" onclick="prev()"> &lt; </button>
+        <button id="next" onclick="next()"> &gt; </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

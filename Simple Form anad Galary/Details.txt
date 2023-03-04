@@ -1,0 +1,50 @@
+The <!DOCTYPE html> declaration defines this document as an HTML5 document.
+The <html> element is the root element of the HTML document.
+The <head> element contains meta information about the document, including the title of the page and any CSS styles.
+The <title> element sets the title of the page that appears in the browser tab.
+The <style> element defines the CSS styles used in the document.
+The <body> element contains the visible content of the document.
+The <h1> element creates a main heading.
+The <p> element creates a paragraph of text.
+The <button> element creates a button that can be clicked.
+The onclick attribute of the button specifies a JavaScript function to be executed when the button is clicked.
+The <script> element includes JavaScript code that is executed in the browser.
+The console.log() function is used to output a message to the browser console.
+
+
+We've added a div with a class of gallery to the HTML page. Inside the div, we've added img elements with the src attribute set to the image file paths and the alt attribute set to a description of the image. This will create a simple photo gallery.
+
+
+
+
+We've added PHP code at the top of the index.php file to connect to a MySQL database and handle the form submission. We've defined the database configuration variables and created a new mysqli object to connect to the database. We've also added code to check if the connection was successful or not.
+
+Inside the if ($_SERVER["REQUEST_METHOD"] == "POST") block, we've extracted the username and password from the $_POST superglobal array and hashed the password using the password_hash() function. We've then inserted the user details into the users table of the database using an SQL INSERT statement.
+
+If the INSERT query is successful, we've redirected the user to a home.php page using the header() function. If there's an error with the query, we've printed the error message on the page.
+
+Finally, we've closed the database connection using the $conn->close() method.
+
+Note: This code is for demonstration purposes only and does not include proper security measures such as input validation and SQL injection prevention. It is important to properly secure your login system before deploying it to a live server.
+
+
+
+We've added CSS styles to the gallery class to create a flexible container with wrapped elements. We've also set the justify-content property to center the images horizontally, and added a gap property to add spacing between the images.
+
+We've also added styles to the img elements to set a fixed width and height, and to apply a border-radius for a rounded edge effect.
+
+This will create a simple photo gallery with a grid of images. You can modify the CSS styles to change the layout and appearance of the gallery as needed.
+
+
+
+we've added the background-image property to the body element in CSS, and set it to the URL of the background image file.
+
+We've also added the background-size property with a value of cover, which scales the background image to cover the entire background area of the page.
+
+Lastly, we've added the background-position property with a value of center, which centers the background image in the background area.
+
+Make sure to update the URL in the url() function with the path to your own background image file. This will create a background image for the HTML page.
+
+
+
+

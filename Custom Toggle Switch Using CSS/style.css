@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .switch-container {
+    width: 24em;
+    height: 10em;
+    border-radius: 10em;
+    box-shadow: 5px 5px 15px 5px #cfd8dc;
+    position: relative;
+  }
+  
+  input {
+    display: none;
+  }
+  
+  .switch-color {
+    width: 22em;
+    height: 8em;
+    left: 1em;
+    top: 1em;
+    background: #cfd8dc;
+    border-radius: 10em;
+    z-index: -1;
+    position: absolute;
+    transition: all 500ms cubic-bezier(0.34, 1.36, 0.2, 1);
+  }
+  
+  label {
+    width: 8em;
+    height: 8em;
+    border-radius: 4em;
+    background: white;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    box-shadow: 2px 2px 10px 2px #cfd8dc;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #switch:checked ~ label {
+    transform: translatex(14em) rotatez(360deg);
+  }
+  
+  #switch:checked ~ .switch-color {
+    background: #00e676;
+  }
+  
+  #switch ~ label {
+    transition: all 1s cubic-bezier(0.34, 1.36, 0.2, 1);
+  }
+  
+  label::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 5em;
+    content: "\f00d";
+    position: absolute;
+    left: 0.42em;
+    top: 0.3em;
+    color: #e9182a;
+  }
+  #switch:checked ~ label::before {
+    opacity: 0;
+  }
+  
+  label::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 5em;
+    content: "\f00c";
+    position: absolute;
+    left: 0.3em;
+    top: 0.3em;
+    opacity: 0;
+    color: #00e676;
+  }
+  #switch:checked ~ label::after {
+    opacity: 1;
+  }
